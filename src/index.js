@@ -1,29 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import App from "./App";
 
-let currDate = new Date(2021, 5, 5, 20);
-currDate = currDate.getHours();
-let greetings = "";
-const cssStyling = {};
-if (currDate >= 1 && currDate <= 12) {
-  greetings = "Good Morning";
-  cssStyling.color = "Green";
-} else if (currDate >= 13 && currDate <= 20) {
-  greetings = "Good Afternoon";
-  cssStyling.color = "Orange";
-} else if (currDate >= 21 && currDate <= 23) {
-  greetings = "Good Night";
-  cssStyling.color = "Black";
-}
-
-ReactDOM.render(
-  <>
-    <div>
-      <h1>
-        Hello sir ,<span style={cssStyling}> {greetings} </span>
-      </h1>
-    </div>
-  </>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
